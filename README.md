@@ -1,114 +1,127 @@
-# Style Store  Application
+# Style Store — Flutter E-Commerce App
 
-Hi! This is my Flutter e-commerce clothing app project. I built it as part of a Flutter Developer Technical Assessment.
+A Flutter-based clothing shopping application developed as part of a Flutter Developer technical assessment.
 
-The main goal of this project was to create a simple shopping app and understand how to manage the app's business logic separately from the UI using BLoC and Clean Architecture.
+## Features
 
-## What I have built
+- **Login:** Email and password validation with dummy authentication.
+- **Product Listing:** Browse clothing products loaded from local JSON.
+- **Watchlist:** Add and remove favourite products with synchronized state.
+- **Shopping Cart:** Add and remove products, update quantities, and calculate totals dynamically.
+- **Dummy Checkout:** View the order summary and simulate payment processing.
+- **Payment Success:** Display a generated order ID and paid amount.
+- **Error Handling:** Handle validation failures and application errors.
+- **Unit Testing:** Tests for important business logic.
 
-- **Login:** Email and password login with validation and demo credentials.
-- **Products:** A clothing product list loaded from a local JSON file.
-- **Watchlist:** Users can add their favourite products and remove them whenever they want.
-- **Cart:** Users can add products, remove them, and increase or decrease quantities.
-- **Price calculation:** The cart total and item count update automatically.
-- **Checkout:** Shows the products, quantities, and total amount before payment.
-- **Dummy payment:** Simulates payment, generates an order ID, and shows a success screen.
-- **Error and empty states:** Added feedback for situations such as an empty cart or failed product loading.
+## Tech Stack
 
-## Technologies I used
+- Flutter and Dart
+- flutter_bloc — state management
+- Clean Architecture
+- Repository Pattern
+- Local JSON data source
+- In-memory cart and watchlist storage
 
-- Flutter
-- Dart
-- BLoC (`flutter_bloc`)
-- Equatable
-- GetIt for dependency injection
-- UUID for generating demo order IDs
-- Flutter Test for unit testing
+## Architecture
 
-## How I organised the code
+The project separates presentation, business logic, and data access.
 
-I tried to keep the UI and business logic separate so the code is easier to understand, maintain, and test.
+```text
+lib/
+├── core/
+├── features/
+│   ├── auth/
+│   │   ├── data/
+│   │   ├── domain/
+│   │   └── presentation/
+│   ├── products/
+│   ├── watchlist/
+│   ├── cart/
+│   └── payment/
+└── main.dart
+```
 
-The project is organised into feature folders. Each main feature has its own layers.
+The exact folders may vary depending on the implementation.
 
-- **Presentation:** Screens, widgets, BLoC events, and states.
-- **Domain:** Entities, repository contracts, and use cases.
-- **Data:** Repository implementations, local data sources, and JSON parsing.
+### Architecture Layers
 
-The basic flow is:
+- **Presentation:** Screens, reusable widgets, BLoC events, states, and UI updates.
+- **Domain:** Business rules, use cases, and repository interfaces.
+- **Data:** Repository implementations, local JSON access, and in-memory data sources.
 
-`UI → BLoC → Use Case → Repository → Data Source`
+### State Management
 
-For example, when a user adds a product to the cart, the UI sends an event to the Cart BLoC. The BLoC calls the appropriate use case, which works through the repository to update the cart data.
+BLoC handles application state using explicit events and states.
 
-I have used GetIt to register dependencies so that the different layers can work together without creating their dependencies directly inside the UI.
+Examples of operations include login submission, product loading, watchlist updates, cart quantity changes, and payment processing.
 
-## Login credentials
+### Data Storage
 
-You can use these credentials to test the login screen:
+- Products are loaded from a local JSON file.
+- Cart and watchlist data use in-memory storage.
+- No backend, database, or real payment gateway is required for this assessment.
 
-- **Email:** `demo@stylestore.com`
-- **Password:** `Style@123`
+## Getting Started
 
-These are demo credentials only. The project uses local dummy authentication, not a real authentication server.
+### Prerequisites
 
-## How to run the project
+- Flutter SDK
+- Dart SDK compatible with the project
+- Android Studio or Visual Studio Code
 
-Make sure Flutter is installed on your system.
+### Installation
 
-1. Clone the repository:
+Clone the repository:
 
-   ```bash
-   git clone YOUR_GITHUB_REPOSITORY_URL
-   ```
+```bash
+git clone https://github.com/ANUBHOWSINGH/style-store.git
+cd style-store
+```
 
-2. Open the project folder:
+Install dependencies:
 
-   ```bash
-   cd style_store
-   ```
+```bash
+flutter pub get
+```
 
-3. Install the dependencies:
+Run the application:
 
-   ```bash
-   flutter pub get
-   ```
+```bash
+flutter run
+```
 
-4. Run the app:
+## Testing
 
-   ```bash
-   flutter run
-   ```
-
-## How to run the tests
-
-I have added tests for cart calculations, Watchlist operations, and login authentication.
-
-Run the tests with:
+Run unit tests:
 
 ```bash
 flutter test
 ```
 
-To check the code for analysis issues, run:
+Run static analysis:
 
 ```bash
 flutter analyze
 ```
 
-## A few things to know
+## Project Requirements
 
-- The product list comes from a local JSON file.
-- Cart and Watchlist data are stored in memory, so they may reset when the app process restarts.
-- Payment is simulated. No real money is charged.
-- Product images may need an internet connection.
+- Flutter and Dart
+- Clean Architecture
+- BLoC with events and states
+- Dedicated use cases and repository abstractions
+- Strongly typed Dart models
+- Local JSON product data
+- Minimum three unit tests
 
-## What I learned
+## Assessment Submission
 
-While working on this project, I got practical experience with BLoC, Clean Architecture, dependency injection, repository patterns, use cases, and unit testing.
+- **GitHub Repository:** https://github.com/ANUBHOWSINGH/style-store
+- **Project:** E-Commerce Clothing Application
+- **Purpose:** Flutter Developer Technical Assessment
 
-I also learned why keeping business logic separate from UI code makes an application easier to maintain and test.
+## Author
 
-## Thank you
+**ANUBHOWSINGH**
 
-Thank you for reviewing my project. I hope the code structure and implementation demonstrate my understanding of Flutter development and application architecture.
+Developed using Flutter and Dart.
