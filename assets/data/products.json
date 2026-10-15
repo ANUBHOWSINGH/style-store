@@ -1,0 +1,83 @@
+
+[
+  {
+    "id": "p001",
+    "name": "Classic White Tee",
+    "subtitle": "Everyday cotton essential",
+    "price": 799.0,
+    "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600",
+    "category": "T-Shirts"
+  },
+  {
+    "id": "p002",
+    "name": "Denim Jacket",
+    "subtitle": "A timeless layering piece",
+    "price": 2499.0,
+    "imageUrl": "https://images.unsplash.com/photo-1543076447-215ad9ba6923?w=600",
+    "category": "Jackets"
+  },
+  {
+    "id": "p003",
+    "name": "Everyday Hoodie",
+    "subtitle": "Soft and comfortable",
+    "price": 1599.0,
+    "imageUrl": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600",
+    "category": "Hoodies"
+  },
+  {
+    "id": "p004",
+    "name": "Casual Linen Shirt",
+    "subtitle": "Lightweight everyday style",
+    "price": 1299.0,
+    "imageUrl": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600",
+    "category": "Shirts"
+  },
+  {
+    "id": "p005",
+    "name": "Slim Fit Jeans",
+    "subtitle": "A modern wardrobe staple",
+    "price": 1899.0,
+    "imageUrl": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=600",
+    "category": "Jeans"
+  },
+  {
+    "id": "p006",
+    "name": "Summer Dress",
+    "subtitle": "Easy and elegant",
+    "price": 2199.0,
+    "imageUrl": "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600",
+    "category": "Dresses"
+  },
+  {
+    "id": "p007",
+    "name": "Classic Polo",
+    "subtitle": "Smart casual comfort",
+    "price": 999.0,
+    "imageUrl": "https://images.unsplash.com/photo-1625910513413-5fc8f3b9e7f0?w=600",
+    "category": "T-Shirts"
+  },
+  {
+    "id": "p008",
+    "name": "Bomber Jacket",
+    "subtitle": "Contemporary streetwear",
+    "price": 2799.0,
+    "imageUrl": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600",
+    "category": "Jackets"
+  },
+  {
+    "id": "p009",
+    "name": "Knit Sweater",
+    "subtitle": "Comfort for cooler days",
+    "price": 1799.0,
+    "imageUrl": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600",
+    "category": "Sweaters"
+  },
+  {
+    "id": "p010",
+    "name": "Casual Trousers",
+    "subtitle": "Comfort meets clean design",
+    "price": 1499.0,
+    "imageUrl": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600",
+    "category": "Trousers"
+  }
+]
